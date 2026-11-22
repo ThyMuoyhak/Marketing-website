@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Astroship</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #111827;
+        }
+    </style>
+</head>
+<body class="bg-white flex flex-col min-h-screen">
+
+    <!-- Header / Navigation -->
+    <nav class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center gap-1">
+            <a href="./index.html" class="text-xl font-bold tracking-tight text-gray-900">Astroship</a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-500">
+            <a href="./index.html" class="hover:text-gray-900 flex items-center gap-1">Features <i class="fa-solid fa-chevron-down text-xs"></i></a>
+            <a href="./pricing.html" class="hover:text-gray-900">Pricing</a>
+            <a href="./about.html" class="hover:text-gray-900 text-gray-900 font-semibold">About</a>
+            <a href="./blog.html" class="hover:text-gray-900 ">Blog</a>
+            <a href="./contact.html" class="hover:text-gray-900">Contact</a>
+        </div>
+
+        <!-- Right Side Actions -->
+        <div class="hidden md:flex items-center space-x-4">
+            <a href="#" class="text-sm font-medium text-gray-900 hover:text-gray-600">Log in</a>
+            <a href="#" class="bg-black text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition">Sign up</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+            <button id="mobile-menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden opacity-0 transition-opacity duration-300 md:hidden"></div>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[70] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col">
+        <!-- Sidebar Header (Close Button) -->
+        <div class="flex items-center justify-between p-6 border-b border-gray-100">
+            <span class="text-xl font-bold text-gray-900">Astroship</span>
+            <button id="close-menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Sidebar Links -->
+        <div class="flex flex-col px-6 py-4 space-y-4 text-base font-medium text-gray-600 overflow-y-auto">
+            <a href="./index.html" class="hover:text-black transition">Features</a>
+            <a href="./pricing.html" class="hover:text-black transition">Pricing</a>
+            <a href="./about.html" class="hover:text-black transition">About</a>
+            <a href="./blog.html" class="hover:text-black transition">Blog</a>
+            <a href="./contact.html" class="hover:text-black transition">Contact</a>
+            
+            <!-- Mobile Auth Buttons -->
+            <div class="mt-8 pt-6 border-t border-gray-100 flex flex-col gap-3">
+                <a href="#" class="text-center text-gray-900 font-medium hover:text-gray-600 py-2">Log in</a>
+                <a href="#" class="text-center bg-black text-white px-4 py-2.5 rounded-md text-sm font-medium hover:bg-gray-800 transition">Sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main About Section -->
+    <main class="flex-grow max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        
+        <!-- Page Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-5xl font-extrabold tracking-tight text-gray-900 mb-4">About</h1>
+            <p class="text-lg text-gray-500">We are a small passionate team.</p>
+        </div>
+
+        <!-- Intro Text -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Empowering the world with Astro.</h2>
+            <p class="text-lg text-gray-500 leading-relaxed">
+                We're a multi-cultural team from around the world! We come from diverse backgrounds, bringing different personalities, experiences and skills to the job. This is what makes our team so special.
+            </p>
+        </div>
+
+        <!-- Team Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
+            
+            <!-- Team Member 1 -->
+            <div class="flex flex-col items-center">
+                <div class="w-full aspect-square mb-4 overflow-hidden rounded-lg bg-gray-100">
+                    <!-- Placeholder image matching the style -->
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600&h=600" alt="Janette Lynch" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900">Janette Lynch</h3>
+                <p class="text-sm text-gray-500 mt-1">Senior Director</p>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="flex flex-col items-center">
+                <div class="w-full aspect-square mb-4 overflow-hidden rounded-lg bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600&h=600" alt="Marcell Ziemann" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900">Marcell Ziemann</h3>
+                <p class="text-sm text-gray-500 mt-1">Principal Strategist</p>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="flex flex-col items-center">
+                <div class="w-full aspect-square mb-4 overflow-hidden rounded-lg bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600&h=600" alt="Robert Palmer" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900">Robert Palmer</h3>
+                <p class="text-sm text-gray-500 mt-1">Marketing Engineer</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full px-4 sm:px-6 lg:px-8 py-12 text-center mt-auto">
+        <p class="text-sm text-gray-500 mb-2">Copyright © 2026 Astroship. All rights reserved.</p>
+        <p class="text-xs text-gray-400">
+            Made by <a href="#" class="font-semibold hover:text-gray-600 transition">Web3Templates</a> - Distributed by <a href="#" class="font-semibold hover:text-gray-600 transition">ThemeWagon</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

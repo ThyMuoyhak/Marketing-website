@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astroship - Marketing Website Template</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #111827;
+        }
+        /* Custom styles for the doodle illustration placeholder */
+        .illustration-placeholder {
+            background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='20' fill='%239CA3AF'%3EIllustration Placeholder%3C/text%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body class="bg-white overflow-x-hidden">
+
+    <!-- Header / Navigation -->
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between relative z-50">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center gap-1">
+            <a href="./index.html" class="text-xl font-bold tracking-tight text-gray-900">Astroship</a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-500">
+            <a href="./index.html" class="hover:text-gray-900 flex items-center gap-1">Features <i class="fa-solid fa-chevron-down text-xs"></i></a>
+            <a href="./pricing.html" class="hover:text-gray-900">Pricing</a>
+            <a href="./about.html" class="hover:text-gray-900">About</a>
+            <a href="./blog.html" class="hover:text-gray-900 ">Blog</a>
+            <a href="./contact.html" class="hover:text-gray-900">Contact</a>
+        </div>
+
+        <!-- Right Side Actions -->
+        <div class="hidden md:flex items-center space-x-4">
+            <a href="#" class="text-sm font-medium text-gray-900 hover:text-gray-600">Log in</a>
+            <a href="#" class="bg-black text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition">Sign up</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+            <button id="mobile-menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden opacity-0 transition-opacity duration-300 md:hidden"></div>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[70] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col">
+        <!-- Sidebar Header (Close Button) -->
+        <div class="flex items-center justify-between p-6 border-b border-gray-100">
+            <span class="text-xl font-bold text-gray-900">Astroship</span>
+            <button id="close-menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Sidebar Links -->
+        <div class="flex flex-col px-6 py-4 space-y-4 text-base font-medium text-gray-600 overflow-y-auto">
+            <a href="./index.html" class="hover:text-black transition">Features</a>
+            <a href="./pricing.html" class="hover:text-black transition">Pricing</a>
+            <a href="./about.html" class="hover:text-black transition">About</a>
+            <a href="./blog.html" class="hover:text-black transition">Blog</a>
+            <a href="./contact.html" class="hover:text-black transition">Contact</a>
+            
+            <!-- Mobile Auth Buttons -->
+            <div class="mt-8 pt-6 border-t border-gray-100 flex flex-col gap-3">
+                <a href="#" class="text-center text-gray-900 font-medium hover:text-gray-600 py-2">Log in</a>
+                <a href="#" class="text-center bg-black text-white px-4 py-2.5 rounded-md text-sm font-medium hover:bg-gray-800 transition">Sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div>
+                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900 leading-[1.1] mb-6">
+                    Marketing website<br>done with Astro
+                </h1>
+                <p class="text-lg text-gray-500 mb-8 max-w-lg leading-relaxed">
+                    Astroship is a starter template for startups, marketing websites & landing pages. Built with Astro.build and TailwindCSS. You can quickly create any website with this starter.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-gray-800 transition gap-2">
+                        <i class="fa-brands fa-google-drive"></i> Download for Free
+                    </a>
+                    <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50 transition gap-2">
+                        <i class="fa-brands fa-github"></i> GitHub Repo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Content (Illustration) -->
+            <div class="relative flex justify-center items-center h-96 w-full">
+                <!-- Using a high-quality image from unDraw or similar to match the vibe -->
+                <img src="https://preview.themewagon.com/astroship/_astro/hero.DlKDY3ml_Z23dT8W.webp" alt="Astronaut Illustration" class="w-full max-w-md h-auto object-contain">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Everything you need to start a website</h2>
+            <p class="text-lg text-gray-500">Astro comes batteries included. It takes the best parts of state-of-the-art tools and adds its own innovations.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+            <!-- Feature 1 -->
+            <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Bring Your Own Framework</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.</p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">100% Static HTML, No JS</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.</p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white">
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">On-Demand Components</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.</p>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white">
+                        <i class="fa-solid fa-cube"></i>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Broad Integration</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.</p>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">SEO Enabled</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!</p>
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Community</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Works with technologies -->
+        <div class="mt-20 text-center">
+            <p class="text-gray-500 mb-8 font-medium">Works with your technologies</p>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-80">
+                <!-- Using Font Awesome for tech logos -->
+                <i class="fa-brands fa-react text-4xl text-black"></i>
+                <i class="fa-brands fa-stripe-s text-4xl text-black"></i> <!-- Placeholder for Astro -->
+                <i class="fa-brands fa-js text-4xl text-black"></i>
+                <i class="fa-brands fa-vuejs text-4xl text-black"></i>
+                <i class="fa-brands fa-svelte text-4xl text-black"></i>
+                <i class="fa-solid fa-caret-up text-4xl text-black"></i> <!-- Placeholder for Vercel/Next -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="bg-black rounded-2xl py-20 px-6 sm:px-12 text-center relative overflow-hidden">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Build faster websites.</h2>
+            <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                Pull content from anywhere and serve it fast with Astro's next-gen island architecture.
+            </p>
+            <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-100 transition">
+                Get Started
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+        <p class="text-sm text-gray-500 mb-2">Copyright © 2026 Astroship. All rights reserved.</p>
+        <p class="text-xs text-gray-400">
+            Made by <a href="#" class="font-semibold hover:text-gray-600 transition">Web3Templates</a> - Distributed by <a href="#" class="font-semibold hover:text-gray-600 transition">ThemeWagon</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
